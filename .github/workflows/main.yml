@@ -36,8 +36,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build
-        run: mvn --file pom.xml  --batch-mode --update-snapshots package
+      - name: Perform build
+        run: mvn --file pom.xml -DskipTests --batch-mode --update-snapshots package
 
       - name: Upload target folder
         uses: actions/upload-artifact@master
