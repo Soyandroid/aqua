@@ -26,7 +26,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: test
-    if: github.event_name == 'release'
+    if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
 
@@ -40,8 +40,11 @@ jobs:
       - name: Perform build
         run: mvn --file pom.xml -DskipTests --batch-mode --update-snapshots package
 
-      - name: Upload target folder
+      - name: Upload build folder
         uses: actions/upload-artifact@master
         with:
-          name: target
-          path: target
+          name: release
+          path: |
+            ./target/**/*.jar
+            ./target/classes/db
+            ./target/classes/application.properties
