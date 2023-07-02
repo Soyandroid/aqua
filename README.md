@@ -62,7 +62,7 @@ You will find the jar file inside the `target` folder.
 
 After that, please follow the *[quick start](https://github.com/Lekuruu/aqua/tree/master#quick-start)* instructions.
 
-## Configuration:
+## Configuration
 Configuration is saved in `application.properties`
 
 If you are going to deploy on other machine, you must change the `allnet.server.host` and `allnet.server.port` to the IP or Hostname of the hosting machine.
@@ -70,12 +70,12 @@ This will be send to the game at booting and being used by following request.
 
 And you can switch to MySQL (MariaDB) database by commenting the Sqlite part.
 
-#### Game specific setting:
+#### Game specific setting
 
 ##### CHUNITHM:
 Support auto profile downgrade now. You can just run any legacy version, but works better if you set a different keychip serial.
 
-### Other Information:
+## Other Information
 This server provide a simple API for changing some DIVA's setting.
 
 A Web App can be found on https://github.com/samnyan/aqua-viewer
@@ -84,8 +84,12 @@ Live Version: http://aqua.samnyan.icu/
 
 And DIVA screenshot will be save in data folder.
 
+## Credit:
+* **samnyan**
+* **Akasaka Ryuunosuke** : providing all the DIVA protocol information
+* All devs who contribute to the MiniMe server
 
-### Changelog:
+## Changelog
 v0.0.16: **[This will do database update]**
 
 [chuni] Add support for CHUNITHM Amazon Plus
@@ -214,8 +218,3 @@ v0.0.4:
 v0.0.3:
 
 Add database migration tool. If you are running on a old version, I encourage you to delete the old database and generate a new one.
-
-### Credit:
-* **samnyan**
-* **Akasaka Ryuunosuke** : providing all the DIVA protocol information
-* All devs who contribute to the MiniMe server
