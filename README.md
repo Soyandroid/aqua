@@ -1,40 +1,78 @@
 # Aqua Server
 An multipurpose game server power by Spring Boot.
 
-### Supported Games:
+### Supported Games
 * CHUNITHM Amazon Plus ( And below )
 * Project DIVA Arcade Future Tone
 * O.N.G.E.K.I. SUMMER
 * O.N.G.E.K.I. PLUS
 
-### Usage:
+## Quick Start
 Requirements:
 * Java 11 or above
-* MySQL (Optional)
+* *MySQL (Optional)*
 
-Edit `application.properties` , change the `allnet.server.host` to your IP address or hostname.
-DIVA won't work with localhost and 127.0.0.1
+Download the latest release.zip from [here](https://github.com/Lekuruu/aqua/releases/latest) and extract it somewhere.
 
-Then run `java -jar aqua.jar`
+The folder structure should look something like this:
+```
+├──data
+│   └── db.sqlite (empty)
+├── application.properties
+└── aqua.jar
+```
 
-or use the `start.bat` if you are using windows.
+Edit `application.properties`, change the `allnet.server.host` to your IP address or hostname.
+DIVA won't work with localhost and 127.0.0.1.
 
-User data will be save in data/db.sqlite.
+See *[configuration](https://github.com/Lekuruu/aqua/tree/master#configuration)*.
+
+Ensure you have the `JAVA_HOME` environment variable set.
+
+On Windows you can run this command inside cmd:
+```shell
+echo %JAVA_HOME%
+  C:\Program Files\Java\jdk-X.X.X
+```
+
+On Linux you can check it with:
+```shell
+$JAVA_HOME
+  /usr/lib/jvm/java-X-openjdk-amd64: Is a directory
+```
+
+After that, run the project:
+```shell
+java -jar aqua.jar
+```
+
+User data will be saved in data/db.sqlite.
 If you switch to MySQL, it will auto create the table and import some initial data.
 
-Please go to the database migration tool's website to check if the Database version is being supported https://flywaydb.org/documentation/database/mariadb 
+Please go to the database migration tool's website to check if the Database version is being supported https://flywaydb.org/documentation/database/mariadb
 
-### Configuration:
-Configuration is save in `application.properties`
+## Building
+
+To build the project, simply run:
+```shell
+mvn package
+```
+
+You will find the jar file inside the `target` folder.
+
+After that, please follow the *[quick start](https://github.com/Lekuruu/aqua/tree/master#quick-start)* instructions.
+
+## Configuration:
+Configuration is saved in `application.properties`
 
 If you are going to deploy on other machine, you must change the `allnet.server.host` and `allnet.server.port` to the IP or Hostname of the hosting machine.
 This will be send to the game at booting and being used by following request.
 
-And you can switch to MySQL(MariaDB) database by commenting the Sqlite part.
+And you can switch to MySQL (MariaDB) database by commenting the Sqlite part.
 
-####Game specific setting:
+#### Game specific setting:
 
-#####CHUNITHM:
+##### CHUNITHM:
 Support auto profile downgrade now. You can just run any legacy version, but works better if you set a different keychip serial.
 
 ### Other Information:
