@@ -55,7 +55,7 @@ Please go to the database migration tool's website to check if the Database vers
 
 To build the project, simply run:
 ```shell
-mvn package
+./mvnw package
 ```
 
 You will find the jar file inside the `target` folder.
