@@ -46,5 +46,4 @@ jobs:
           name: release
           path: |
             ./target/**/*.jar
-            ./target/classes/db
-            ./target/classes/application.properties
+            ./target/classes/**/*.properties
