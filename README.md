@@ -1,7 +1,7 @@
 # Aqua Server
 An multipurpose game server power by Spring Boot.
 
-### Supported Game:
+### Supported Games:
 * CHUNITHM Amazon Plus ( And below )
 * Project DIVA Arcade Future Tone
 * O.N.G.E.K.I. SUMMER
