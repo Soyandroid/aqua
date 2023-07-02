@@ -43,7 +43,5 @@ jobs:
       - name: Upload build folder
         uses: actions/upload-artifact@master
         with:
-          name: release
-          path: |
-            ./target/**/*.jar
-            ./target/classes/**/*.properties
+          name: target
+          path: target
